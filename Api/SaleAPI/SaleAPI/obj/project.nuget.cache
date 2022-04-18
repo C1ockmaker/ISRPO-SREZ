@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "L+bOLGV3zQZ1PFBQ/yZezla6fBOtsX5vfVEygvzHjcVPN+bQZ1oxHarKcY8p6YtI8qRbtNg6BhBitGxDanxOtA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\79776\\Documents\\GitHub\\ISRPO-SREZ\\Api\\SaleAPI\\SaleAPI\\SaleAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\79776\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\79776\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\79776\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\79776\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\79776\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\79776\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

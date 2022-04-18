@@ -1,0 +1,54 @@
+﻿<Window x:Name="___Без_имени_" x:Class="ISRPO_SREZ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISRPO_SREZ"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="725" ResizeMode="NoResize">
+    <Grid Background="#FFF9E5E5" Margin="0,0,3.4,0">
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Начальная дата:" VerticalAlignment="Top" Margin="42,20,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Конечная дата:" VerticalAlignment="Top" Margin="231,20,0,0"/>
+        <DatePicker x:Name="dp1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="29,41,0,0" Width="112" DisplayDate="04/18/2022 05:21:48"/>
+        <DatePicker x:Name="dp2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,41,0,0" Width="112" SelectedDateFormat="Short"/>
+        <Button Content="Получить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Margin="372,36,0,0" Height="34" Click="Button_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid x:Name="controlLayout">
+                        <Ellipse Width="80" Height="30"  x:Name="buttonSurface" Fill="Pink"></Ellipse>
+                        <Label x:Name="buttonCaption" VerticalAlignment="Center"
+                                   HorizontalAlignment="Center" Content="Получить"></Label>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="59" VerticalAlignment="Top" Width="140" Margin="536,119,0,0" Background="White"/>
+        <Image HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="47" Margin="614,128,0,0" Source="/Resources/ExcelIcon.png"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Сформировать чек" VerticalAlignment="Top" Margin="554,98,0,0"/>
+        <Image HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="47" Margin="549,128,0,0" Source="/Resources/WordIcon.png"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="566,221,0,0"><Run Text="Сформировать"/><LineBreak/><Run Text=" "/><Run Text="  отчетность"/></TextBlock>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="29,327,0,0"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="59" VerticalAlignment="Top" Width="140" Margin="536,262,0,0" Background="White"/>
+        <Image HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="47" Margin="614,271,0,0" Source="/Resources/ExcelIcon.png"/>
+        <Image HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="47" Margin="549,271,0,0" Source="/Resources/WordIcon.png" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="157,311,0,10" Background="White" HorizontalAlignment="Left" Width="231"/>
+        <ListView x:Name="kara" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="29,89,0,131" HorizontalAlignment="Left" Width="429">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Width="400">
+                        <Label Name="lb0" Background="Gray" Content="{Binding Client.FIO}" Width="402"></Label>
+                        <DataGrid x:Name="dg1" Width="404" Height="200" ItemsSource="{Binding Telephones}" AutoGenerateColumns="False" CanUserAddRows="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Артикул" Width="*" Binding="{Binding Articul}"/>
+                                <DataGridTextColumn Header="Производитель" Width="*" Binding="{Binding Manufacturer}"/>
+                                <DataGridTextColumn Header="Наименование" Width="*" Binding="{Binding NameTelephone}"/>
+                                <DataGridTextColumn Header="Количество" Width="*" Binding="{Binding Count}"/>
+                                <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Cost}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Window>
